@@ -1,0 +1,62 @@
+{
+  "title": "InterRail Passager",
+  "description": "Validering af passagerType og alder",
+  "type": "object",
+  "properties": {
+    "passagerType": {
+      "type": "string",
+      "enum": ["barn", "ung", "voksen", "senior"]
+    },
+    "alder": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["passagerType", "alder"],
+  "if": {
+    "properties": {
+      "passagerType": { "const": "barn" }
+    }
+  },
+  "then": {
+    "properties": {
+      "alder": { "maximum": 13 }
+    }
+  },
+  "else": {
+    "if": {
+      "properties": {
+        "passagerType": { "const": "ung" }
+      }
+    },
+    "then": {
+      "properties": {
+        "alder": { "minimum": 14, "maximum": 26 }
+      }
+    },
+    "else": {
+      "if": {
+        "properties": {
+          "passagerType": { "const": "voksen" }
+        }
+      },
+      "then": {
+        "properties": {
+          "alder": { "minimum": 27, "maximum": 64 }
+        }
+      },
+      "else": {
+        "if": {
+          "properties": {
+            "passagerType": { "const": "senior" }
+          }
+        },
+        "then": {
+          "properties": {
+            "alder": { "minimum": 65 }
+          }
+        }
+      }
+    }
+  }
+}

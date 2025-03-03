@@ -1,0 +1,26 @@
+{
+  "title": "Flydatabase",
+  "description": "Validering af flyinformation",
+  "type": "object",
+  "properties": {
+    "producent": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "år": {
+      "type": "integer"
+    },
+    "km": {
+      "type": "integer"
+    },
+    "pris": {
+      "type": "integer"
+    }
+  },
+  "required": ["producent", "type", "variant", "år", "km", "pris"]
+}

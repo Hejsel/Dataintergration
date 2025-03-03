@@ -1,0 +1,31 @@
+{
+  "title": "Flydatabase",
+  "description": "Validering af flyinformation",
+  "type": "object",
+  "properties": {
+    "producent": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "år": {
+      "type": "integer",
+      "minimum": 1991,
+      "maximum": 2012
+    },
+    "km": {
+      "type": "integer",
+      "minimum": 1000000,
+      "maximum": 100000000
+    },
+    "pris": {
+      "type": "integer",
+      "minimum": 100000001
+    }
+  },
+  "required": ["producent", "type", "variant", "år", "km", "pris"]
+}

@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "species database",
+    "description": "created by the Borg",
+    "type": "object",
+    "properties": {
+      "species": {
+        "type": "string",
+        "enum": [
+          "non-humanoid",
+          "humanoid",
+          "insectoid",
+          "aquatic",
+          "avian",
+          "arborial",
+          "reptilian"
+        ]
+      },
+      "id": {
+        "type": "integer"
+      },
+      "traits": {
+        "type": "object",
+        "properties": {
+          "realm": {
+            "type": "string"
+          },
+          "warpCapable": {
+            "type": "boolean"
+          },
+          "encounters": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "assimilationDate": {
+            "type": ["null", "integer"]
+          }
+        },
+        "required": ["realm", "warpCapable", "encounters"]
+      },
+      "resistanceIsFutile": {
+        "type": "boolean"
+      }
+    },
+    "required": ["species", "id", "traits", "resistanceIsFutile"]
+}
+  

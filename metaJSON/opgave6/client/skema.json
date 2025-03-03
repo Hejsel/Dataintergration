@@ -1,0 +1,34 @@
+{
+  "title": "Tal validering",
+  "type": "object",
+  "properties": {
+    "talA": {
+      "type": "number",
+      "multipleOf": 77
+    },
+    "talB": {
+      "type": "number",
+      "anyOf": [
+        { "multipleOf": 7 },
+        { "multipleOf": 11 }
+      ]
+    },
+    "talC": {
+      "type": "number",
+      "oneOf": [
+        { "multipleOf": 7 },
+        { "multipleOf": 11 }
+      ]
+    },
+    "talD": {
+      "type": "number",
+      "not": {
+        "anyOf": [
+          { "multipleOf": 7 },
+          { "multipleOf": 11 }
+        ]
+      }
+    }
+  },
+  "required": ["talA", "talB", "talC", "talD"]
+}

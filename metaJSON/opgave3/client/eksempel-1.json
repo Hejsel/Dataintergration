@@ -1,0 +1,59 @@
+{
+  "title": "Karakter skema",
+  "description": "Betingelsesbegrænsninger: if...then...else",
+
+  "type": "object",
+  "properties": {
+    "percentage": { "type": "number", "minimum": 0, "maximum": 100 },
+    "grade": { "type": "integer" }
+  },
+  "if": {
+    "properties": { "percentage": { "maximum": 35 } }
+  },
+  "then": {
+    "properties": { "grade": { "const": -3 } }
+  },
+  "else": {
+    "if": {
+      "properties": { "percentage": { "maximum": 59 } }
+    },
+    "then": {
+      "properties": { "grade": { "const": 0 } }
+    },
+    "else": {
+      "if": {
+        "properties": { "percentage": { "maximum": 64 } }
+      },
+      "then": {
+        "properties": { "grade": { "const": 2 } }
+      },
+      "else": {
+        "if": {
+          "properties": { "percentage": { "maximum": 72 } }
+        },
+        "then": {
+          "properties": { "grade": { "const": 4 } }
+        },
+        "else": {
+          "if": {
+            "properties": { "percentage": { "maximum": 85 } }
+          },
+          "then": {
+            "properties": { "grade": { "const": 7 } }
+          },
+          "else": {
+            "if": {
+              "properties": { "percentage": { "maximum": 93 } }
+            },
+            "then": {
+              "properties": { "grade": { "const": 10 } }
+            },
+            "else": {
+              "properties": { "grade": { "const": 12 } }
+            }
+          }
+        }
+      }
+    }
+  }
+}

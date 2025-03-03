@@ -1,0 +1,41 @@
+{
+  "title": "Flymodel og motorantal validering",
+  "description": "Betingelsesbegrænsninger uden else",
+
+  "type": "object",
+  "properties": {
+    "fly": {
+      "type": "string"
+    },
+    "motorer": {
+      "type": "integer"
+    }
+  },
+  "required": ["fly", "motorer"],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "fly": { "enum": ["A340", "A380"] }
+        }
+      },
+      "then": {
+        "properties": {
+          "motorer": { "const": 4 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "fly": { "enum": ["A320", "A350"] }
+        }
+      },
+      "then": {
+        "properties": {
+          "motorer": { "const": 2 }
+        }
+      }
+    }
+  ]
+}
