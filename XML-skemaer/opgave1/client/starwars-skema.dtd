@@ -1,0 +1,7 @@
+<!ELEMENT starwars (karakter+)>
+<!ELEMENT karakter (navn, art, hjemplanet, rolle, vaaben)>
+<!ELEMENT navn (#PCDATA)>
+<!ELEMENT art (#PCDATA)>
+<!ELEMENT hjemplanet (#PCDATA)>
+<!ELEMENT rolle (#PCDATA)>
+<!ELEMENT vaaben (#PCDATA)>

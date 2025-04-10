@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<computere>
+    <pc id="1">
+        <model>Dell XPS 15</model>
+        <producent>Dell</producent>
+        <processor>Intel Core i7-12700H</processor>
+        <ram>16GB DDR5</ram>
+        <lagring>512GB SSD</lagring>
+        <grafikkort>NVIDIA GeForce RTX 3050 Ti</grafikkort>
+        <skærmstørrelse>15.6" 1920x1200</skærmstørrelse>
+        <pris>14999</pris>
+        <valuta>DKK</valuta>
+    </pc>
+    <pc id="2">
+        <model>MacBook Pro 14</model>
+        <producent>Apple</producent>
+        <processor>Apple M2 Pro</processor>
+        <ram>16GB</ram>
+        <lagring>1TB SSD</lagring>
+        <grafikkort>Apple GPU 16-core</grafikkort>
+        <skærmstørrelse>14.2" 3024x1964</skærmstørrelse>
+        <pris>18999</pris>
+        <valuta>DKK</valuta>
+    </pc>
+    <pc id="3">
+        <model>Lenovo Legion 5</model>
+        <producent>Lenovo</producent>
+        <processor>AMD Ryzen 7 6800H</processor>
+        <ram>32GB DDR5</ram>
+        <lagring>1TB SSD</lagring>
+        <grafikkort>NVIDIA GeForce RTX 3070</grafikkort>
+        <skærmstørrelse>15.6" 2560x1440</skærmstørrelse>
+        <pris>13999</pris>
+        <valuta>DKK</valuta>
+    </pc>
+</computere>

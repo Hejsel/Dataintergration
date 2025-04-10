@@ -1,0 +1,28 @@
+<xs:element name="jsIdentifier">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <!-- Mønster, der tillader Unicode-tegn og følger reglerne for JS-identifiers -->
+            <xs:pattern value="[A-Za-z_$\u00C0-\uFFFF][A-Za-z0-9_$\u00C0-\uFFFF]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<!-- 
+_____________________________________________________
+Eksempler på gyldige JavaScript-identifiers:
+
+myVariable
+_privateVar
+$dollarValue
+var123
+A
+my_function
+_____________________________________________________
+
+Eksempler på ugyldige JavaScript-identifiers:
+
+123abc (starter med et tal)
+@invalid (indeholder et ulovligt tegn)
+function* (JavaScript tillader ikke visse reserverede ord som identifikatorer, men denne XSD-regel dækker ikke reservede ord).
+_____________________________________________________
+-->

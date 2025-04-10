@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajv Validering</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/8.17.1/ajv7.min.js" defer></script>
+  <script src="validate.js" defer></script>
+</head>
+<body>
+  <h1>JSON Validering med Ajv</h1>
+
+  <label for="schemaFile">Upload Skema (skema.json):</label>
+  <input type="file" id="schemaFile" accept=".json"><br><br>
+
+  <label for="jsonFile">Upload Data (data.json):</label>
+  <input type="file" id="jsonFile" accept=".json"><br><br>
+
+  <button onclick="validateFiles()">Valider</button>
+
+  <div id="result"></div>
+
+</body>
+</html>

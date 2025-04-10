@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Ajv = require('ajv');
-const ajv = new Ajv();
+const ajv = new Ajv( {strict: false});
 
 // Hent kommandolinjeargumenter
 const schemaFile = process.argv[2]; // Skemaet som første argument
@@ -11,11 +11,9 @@ if (!schemaFile || !jsonFile) {
   process.exit(1);
 }
 
-// Læs og parse JSON-skema og data
 const schema = JSON.parse(fs.readFileSync(schemaFile, 'utf-8'));
 const data = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'));
 
-// Kompiler schemaet
 const validate = ajv.compile(schema);
 
 // Valider data

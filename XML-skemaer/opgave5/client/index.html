@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const xsltProcessor = new XSLTProcessor();
+        const parser = new DOMParser();
+        const xsl = parser.parseFromString(xslTekst, "application/xml");
+        const xml = parser.parseFromString(xmlTekst, "application/xml");
+        xsltProcessor.importStylesheet(xsl);
+        const resultDocument = xsltProcessor.transformToFragment(xml, document);
+        console.log(new XMLSerializer().serializeToString(resultDocument));
+    </script>
+</body>
+</html>

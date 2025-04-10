@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<starwars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="filterJedi.xslt">
+    <karakter>
+        <navn>Luke Skywalker</navn>
+        <art>Menneske</art>
+        <hjemplanet>Tatooine</hjemplanet>
+        <rolle>Jedi</rolle>
+        <vaaben>Lysværd</vaaben>
+    </karakter>
+    <karakter>
+        <navn>Darth Vader</navn>
+        <art>Menneske</art>
+        <hjemplanet>Tatooine</hjemplanet>
+        <rolle>Sith Lord</rolle>
+        <vaaben>Lysværd</vaaben>
+    </karakter>
+    <karakter>
+        <navn>Yoda</navn>
+        <art>Ukendt</art>
+        <hjemplanet>Ukendt</hjemplanet>
+        <rolle>Jedi Mester</rolle>
+        <vaaben>Lysværd</vaaben>
+    </karakter>
+    <karakter>
+        <navn>Han Solo</navn>
+        <art>Menneske</art>
+        <hjemplanet>Corellia</hjemplanet>
+        <rolle>Smugler</rolle>
+        <vaaben>Blaster</vaaben>
+    </karakter>
+</starwars>

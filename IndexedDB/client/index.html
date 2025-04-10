@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatur Sammenligning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Temperatur Sammenligning</h1>
+    
+    <div>
+        <label>By 1: <input type="text" id="by1"></label>
+        <label>By 2: <input type="text" id="by2"></label>
+        <label>By 3: <input type="text" id="by3"></label>
+        <label>By 4: <input type="text" id="by4"></label>
+        <button id="hentData">Hent temperaturer</button>
+    </div>
+
+    <h2>Temperaturvisualisering</h2>
+    <canvas id="diagramCanvas" width="400" height="250" style="border:1px solid #ccc; border-radius: 8px;"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
